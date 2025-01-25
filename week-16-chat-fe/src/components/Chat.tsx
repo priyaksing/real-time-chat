@@ -58,7 +58,7 @@ function Chat() {
                 <div className='bg-gray-600/30 text-gray-400 p-4 rounded-lg flex gap-3'>
                     Room Code: {room}
                     <span
-                        onClick={() => navigator.clipboard.writeText(room)}
+                        onClick={() => navigator.clipboard.writeText(room as unknown as string)}
                         className="text-xs text-gray-400/50 hover:text-gray-400">
                         <CopyIcon />
                     </span>
@@ -77,7 +77,6 @@ function Chat() {
 
                 <div className="gap-4 flex items-center">
                     <input
-                        // ref={inputRef}
                         value={inputText}
                         onChange={(e) => setInputText(e.target.value)}
                         className={'flex-1 px-4 py-4 bg-transparent rounded-lg ' + borderStyle}

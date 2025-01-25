@@ -8,7 +8,7 @@ import CopyIcon from "../icons/CopyIcon";
 export default function Home() {
 
     const [code, setCode] = useState("");
-    const inputRef = useRef<HTMLInputElement>();
+    const inputRef = useRef<HTMLInputElement>(null);
     const navigate = useNavigate();
 
     function generateCode() {
